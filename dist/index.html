@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <script src="vendor/webcomponents-loader.js"></script>
+  <script type="module" src="index.bundle.js"></script>
+</head>
+<body>
+
+<mayflower-header skipTarget="#main">
+  <mayflower-site-logo slot="logo">Mass.gov</mayflower-site-logo>
+  <nav slot="nav">
+    <ul is="HeaderNav">
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+  </nav>
+</mayflower-header>
+
+<a is="mayflower-callout-link"><span>Foo</span></a>
+
+<main id="main"></main>
+
+</body>
+</html>

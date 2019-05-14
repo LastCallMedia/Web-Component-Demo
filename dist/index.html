@@ -11,10 +11,8 @@
       min-height: 500px;
     }
     ul {
-      position: relative;
-    }
-    ul:before {
-      content: "R"
+      background: white;
+      color: black;
     }
   </style>
 </head>
@@ -30,19 +28,14 @@
   <litelement-video video-id="oHg5SJYRHA0" video-height="480" video-width="640"></litelement-video>
 </div>
 <div class="frame">
-  <h1>But there are some things that are hard!</h1>
-
-  <litelement-slideshow>
-    <p>Never gonna give you up!</p>
-    <p>Never gonna let you down!</p>
-  </litelement-slideshow>
+  <h1>Styling - crossing into the light (DOM)</h1>
 
   <litelement-list-container>
     <ul>
-      <li>I'm on the first level</li>
+      <li>I'm styled by the shadow DOM!</li>
       <li>
         <ul>
-          <li>I'm on the second level!</li>
+          <li>I'm shadowed by the light DOM!</li>
         </ul>
       </li>
     </ul>

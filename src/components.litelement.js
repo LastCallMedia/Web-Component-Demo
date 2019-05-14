@@ -35,6 +35,13 @@ class UglyVideo extends LitElement {
             marquee {
                 border: black;
             }
+            iframe {
+                animation: spin 3s infinite linear;
+            }
+            @keyframes spin {
+                from {transform:rotate(0deg);}
+                to {transform:rotate(360deg);}
+            }
         `
     }
     getEmbedCode(id) {
@@ -46,39 +53,15 @@ class UglyVideo extends LitElement {
 }
 window.customElements.define('litelement-video', UglyVideo);
 
-class Slideshow extends LitElement {
-    static get styles() {
-        return css`
-        :host {
-            display: block;
-        }
-        :slotted(*) {
-            position: absolute;
-            
-            width: 100%;
-        }
-        
-        ul {
-            margin-left: 10px;
-        }
-    `
-    }
-
-    render() {
-        return html`<div><slot></slot></div>`
-    }
-}
-
-window.customElements.define('litelement-slideshow', Slideshow);
-
 class ListContainer extends LitElement {
     static get styles() {
         return css`
         :host {
             display: block;
         }
-        ::slotted(ul):before {
-            content: "I am styled by the shadow DOM"
+        ::slotted(ul) {
+            background: black !important;
+            color: white !important;
         }
     `
     }

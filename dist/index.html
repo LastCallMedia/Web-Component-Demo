@@ -2,23 +2,50 @@
 
 <head>
   <script src="vendor/webcomponents-loader.js"></script>
-  <script type="module" src="index.bundle.js"></script>
+  <script type="module" src="native.bundle.js"></script>
+  <script type="module" src="litelement.bundle.js"></script>
+
+  <style>
+    .frame {
+      height: 100vh;
+    }
+    ul {
+      position: relative;
+    }
+    ul:before {
+      content: "R"
+    }
+  </style>
 </head>
 <body>
 
-<mayflower-header skipTarget="#main">
-  <mayflower-site-logo slot="logo">Mass.gov</mayflower-site-logo>
-  <nav slot="nav">
-    <ul is="HeaderNav">
-      <li>Item 1</li>
-      <li>Item 2</li>
+<div class="frame">
+  <h1>Here are some buttons!</h1>
+  <native-button href="https://www.youtube.com/watch?v=oHg5SJYRHA0">This is a "native" button.</native-button>
+  <litelement-button href="https://www.youtube.com/watch?v=oHg5SJYRHA0">This is a "LitElement" button.</litelement-button>
+</div>
+<div class="frame">
+  <h1>How about a weird, side scrolling video?</h1>
+  <litelement-video video-id="oHg5SJYRHA0" video-height="480" video-width="640"></litelement-video>
+</div>
+<div class="frame">
+  <h1>But there are some things that are hard!</h1>
+
+  <litelement-slideshow>
+    <p>Never gonna give you up!</p>
+    <p>Never gonna let you down!</p>
+  </litelement-slideshow>
+
+  <litelement-list-container>
+    <ul>
+      <li>I'm on the first level</li>
+      <li>
+        <ul>
+          <li>I'm on the second level!</li>
+        </ul>
+      </li>
     </ul>
-  </nav>
-</mayflower-header>
-
-<a is="mayflower-callout-link"><span>Foo</span></a>
-
-<main id="main"></main>
-
+  </litelement-list-container>
+</div>
 </body>
 </html>

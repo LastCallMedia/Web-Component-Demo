@@ -2,7 +2,7 @@
 const {resolve, join} = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const OUTPUT_PATH = resolve('junk'); //resolve('dist');
+const OUTPUT_PATH = resolve('dist'); //resolve('dist');
 const webcomponentsjs = './node_modules/@webcomponents/webcomponentsjs';
 const polyfills = [
   {
@@ -21,7 +21,8 @@ const polyfills = [
 module.exports = {
   mode: 'production',
   entry: {
-    index: './src/index.js',
+    native: './src/components.native.js',
+    litelement: './src/components.litelement.js',
   },
   output: {
     filename: '[name].bundle.js',

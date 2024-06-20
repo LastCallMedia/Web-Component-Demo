@@ -1,6 +1,7 @@
 Web Component Demo
 ==================
 
+Web Component Demo is brought to you by your friends at [Last Call Media](https://www.lastcallmedia.com).
 Setting up the demo:
 
 1. Clone this project down and run `npm install`
